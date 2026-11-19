@@ -116,21 +116,36 @@
         <label for="phone">رقم الموبايل</label>
         <input id="phone" name="phone" type="tel" placeholder="01xxxxxxxxx" required>
 
-        <label for="fruit">اختر الفاكهة</label>
-        <select id="fruit" name="fruit">
-          <option>Dried Strawberry - 50 جنيه</option>
-          <option>Dried Mango - 60 جنيه</option>
-          <option>Dried Banana - 35 جنيه</option>
-          <option>Dried Apricot - 45 جنيه</option>
-          <option>Dried Apple - 40 جنيه</option>
-        </select>
+        <!-- اختيار أكثر من فاكهة: اكتب الجرامات للفاكهة اللي عايزها وسيب الباقي فاضي -->
+        <fieldset>
+          <legend>اختر فاكهتك واكتب عدد الجرامات</legend>
+          <p class="hint">اكتب الجرامات للفاكهة اللي عايزها، وسيب الباقي فاضي. أقل كمية 50 جرام.</p>
 
-        <label for="amount">الكمية</label>
-        <select id="amount" name="amount">
-          <option>100 جرام</option>
-          <option>200 جرام</option>
-          <option>500 جرام</option>
-        </select>
+          <div class="fruit-row">
+            <label for="g-strawberry">🍓 Dried Strawberry <small>50 جنيه / 100 جرام</small></label>
+            <span class="grams"><input id="g-strawberry" name="strawberry" type="number" min="50" placeholder="0"> جرام</span>
+          </div>
+
+          <div class="fruit-row">
+            <label for="g-mango">🥭 Dried Mango <small>60 جنيه / 100 جرام</small></label>
+            <span class="grams"><input id="g-mango" name="mango" type="number" min="50" placeholder="0"> جرام</span>
+          </div>
+
+          <div class="fruit-row">
+            <label for="g-banana">🍌 Dried Banana <small>35 جنيه / 100 جرام</small></label>
+            <span class="grams"><input id="g-banana" name="banana" type="number" min="50" placeholder="0"> جرام</span>
+          </div>
+
+          <div class="fruit-row">
+            <label for="g-apricot">🍑 Dried Apricot <small>45 جنيه / 100 جرام</small></label>
+            <span class="grams"><input id="g-apricot" name="apricot" type="number" min="50" placeholder="0"> جرام</span>
+          </div>
+
+          <div class="fruit-row">
+            <label for="g-apple">🍎 Dried Apple <small>40 جنيه / 100 جرام</small></label>
+            <span class="grams"><input id="g-apple" name="apple" type="number" min="50" placeholder="0"> جرام</span>
+          </div>
+        </fieldset>
 
         <label for="note">ملاحظات (اختياري)</label>
         <textarea id="note" name="note" rows="3" placeholder="أي حاجة تحب تقولها لنا"></textarea>

@@ -37,7 +37,7 @@ h1, h2, h3 {
   padding: 56px 20px 64px;
 }
 .hero h1 { font-size: clamp(1.7rem, 6vw, 2.8rem); font-weight: 800; }
-.hero .hello { font-size: 1.3rem; color: var(--moon); margin: 0 0 10px; }
+.hero .hello { font-size: 1.3rem; color: var(--moon); margin: 0 auto 10px; }
 .hero p { max-width: 560px; margin: 0 auto 22px; }
 
 /* القمر: دائرة بدون لون + ظل مُزاح = هلال */
@@ -153,6 +153,31 @@ h1, h2, h3 {
   color: var(--night);
 }
 .order button { margin-top: 16px; justify-self: start; }
+
+/* ===== اختيار أكثر من فاكهة: سطر لكل فاكهة ===== */
+.order fieldset {
+  border: 2px solid #d9d9ea;
+  border-radius: 14px;
+  margin: 10px 0 0;
+  padding: 8px 10px 14px;
+}
+.order legend { font-weight: 700; padding: 0 8px; }
+.hint { margin: 0 0 6px; font-size: 0.9rem; color: var(--lavender); }
+
+.fruit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #ececf5;
+}
+.fruit-row:last-child { border-bottom: 0; }
+.fruit-row label { margin: 0; flex: 1; font-weight: 500; }
+.fruit-row small { display: block; font-size: 0.8rem; color: #6b6f90; }
+
+.grams { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.order .grams input { width: 84px; text-align: center; }
 
 /* ===== رسالة الشكر: مخفية حتى نضغط إرسال ===== */
 .thanks {
